@@ -1,7 +1,7 @@
 import pygame #importing pygame library
 from sys import exit # Importing 'sys' important for various functions 
 
-player_x = 180
+player_x = 150
 player_y = 350
 player_x_change = 0
 player_y_change = 0
