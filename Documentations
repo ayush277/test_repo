@@ -1,0 +1,5 @@
+pygame.display.set_mode() : We create a Graphical window with the call to pygame.display.set_mode().
+pygame.image.load() : To load an image, examples: aliens, spaceship.
+                      It creates a new "surface"
+
+givenSurface.move() : move the object. inside () we put the speed at which it should move
