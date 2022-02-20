@@ -1,9 +1,10 @@
 import pygame #importing pygame library
 from sys import exit # Importing 'sys' important for various functions 
 
-player_x = 200
+player_x = 200 
 player_y = 350
 player_x_change = 0
+player_y_change = 0
 
 def player(x, y):
     spaceship = pygame.image.load('space-invaders\Elements\player.png')
@@ -31,16 +32,23 @@ while True:
         if event.type==pygame.QUIT:
             pygame.quit()
             exit()   # Here the 'X' button is already dedicated for closing the window
-        if event.type == pygame.KEYDOWN:
+        #Player Control 
+        if event.type == pygame.KEYDOWN: #whem key is pressed 
             if pygame.key.get_pressed()[pygame.K_LEFT] or pygame.key.get_pressed()[pygame.K_a]:
-                player_x_change -= 0.2
+                player_x_change -= 0.2 
+            elif pygame.key.get_pressed()[pygame.K_UP] or pygame.key.get_pressed()[pygame.K_w]:
+                player_y_change -= 0.2 
+            elif pygame.key.get_pressed()[pygame.K_DOWN] or pygame.key.get_pressed()[pygame.K_s]:
+                player_y_change += 0.2 
             elif pygame.key.get_pressed()[pygame.K_RIGHT] or pygame.key.get_pressed()[pygame.K_d]:
                 player_x_change += 0.2
         if event.type == pygame.KEYUP:
                 player_x_change = 0
+                player_y_change = 0
         
 
-    player_x += player_x_change
+    player_x += player_x_change 
+    player_y += player_y_change 
     player(player_x, player_y)
     pygame.display.update() 
 
