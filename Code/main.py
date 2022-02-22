@@ -1,7 +1,7 @@
 import pygame #importing pygame library
 from sys import exit # Importing 'sys' important for various functions 
 
-player_x = 150
+player_x = 200
 player_y = 350
 player_x_change = 0
 player_y_change = 0
@@ -12,7 +12,7 @@ def player(x, y):
 
 #standard input
 pygame.init() # Initializing pygame.
-icon = pygame.image.load('space-invaders\Elements\player.png')
+icon = pygame.image.load('Elements\player.png')
 pygame.display.set_icon(icon)
 screen= pygame.display.set_mode((400,400))  # Setup display scrren parameters.
 pygame.display.set_caption("Space Invaders") # Here we also set the clock function to set the framerate for the game so that the the game does'nt run too fast, or too slow.
@@ -51,5 +51,3 @@ while True:
     player_y += player_y_change 
     player(player_x, player_y)
     pygame.display.update() 
-
-
