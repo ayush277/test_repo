@@ -44,7 +44,6 @@ while True:
                 player_x_change += 0.2
         if event.type == pygame.KEYUP:
                 player_x_change = 0
-                player_y_change = 0
         
 
     player_x += player_x_change 
