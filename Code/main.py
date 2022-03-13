@@ -31,7 +31,7 @@ class Player:
             Player.player_x = 340  # adding boundary to the game
         
     def line():
-        rect1 = pygame.Rect((0 ,330 , 400, 200)) #making a rectangle the endline of the screen (0,330) : coordinates of top left corner of rectangle
+        rect1 =  ((0 ,330 , 400, 200)) #making a rectangle the endline of the screen (0,330) : coordinates of top left corner of rectangle
                                     #(400,200) size of rectangle
         pygame.draw.rect(screen, (40,40,40), rect1) #dsiplaying the rectangle on 'screen' and color is (40,40,40)
 

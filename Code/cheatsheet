@@ -1,0 +1,9 @@
+blit() : shows the object, image on screen
+quit() : closes the game
+
+set_mode() : sets the size of window
+
+image.get_rect() : gets a transparent recatangle of size of the image which is used 
+
+pygame.Rect(x, y, length, breadth) : creates a recatangle.
+pygame.draw.rect(screen, color, Rect_to_show_on_screen) : displays the recatangle on the screen
